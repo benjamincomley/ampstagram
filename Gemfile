@@ -18,6 +18,8 @@ gem 'haml'
 gem 'simple_form'
 gem 'paperclip'
 gem 'haml-rails'
+gem 'bootstrap-sass'
+gem 'jquery-rails'
 
 
 group :development, :test do
