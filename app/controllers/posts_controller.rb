@@ -32,7 +32,7 @@ class PostsController < ApplicationController
       flash[:success] = "Post updated hombre"
       redirect_to @post
     else
-      flash[:alert] = "Post not update hombre, try again!"
+      flash[:alert] = "Something is wrong with your form!git add"
       render :edit
     end
   end
