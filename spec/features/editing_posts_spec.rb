@@ -5,9 +5,10 @@ feature 'Editing posts' do
     post = create(:post)
 
     visit '/'
-    find(:xpath, "//a[contains(@href,'posts/1')]").click
+    find(:xpath, ".//a[@href='/posts/#{post.id}']").click
     click_link 'Edit Post'
   end
+
   scenario 'Can edit a post' do
     fill_in 'Caption', with: "Oh god, you weren't meant to see this picture!"
     click_button 'Update Post'

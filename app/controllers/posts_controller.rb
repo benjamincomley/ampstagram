@@ -22,6 +22,21 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    if @post.update(post_params)
+      flash[:success] = "Post updated hombre"
+      redirect_to @post
+    else
+      flash[:alert] = "Post not update hombre, try again!"
+      render :edit
+    end
+  end
+
   private
 
   def post_params
