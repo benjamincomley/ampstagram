@@ -6,7 +6,7 @@ feature 'Deleting posts' do
 
     visit '/'
 
-    find(:xpath, "//a[contains(@href,'posts/1')]").click
+    find(:xpath, ".//a[@href='/posts/#{post.id}']").click
     click_link 'Edit Post'
   end
   scenario 'Can delete a single post' do
