@@ -20,6 +20,7 @@ gem 'paperclip'
 gem 'haml-rails'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
+gem 'devise'
 
 
 group :development, :test do
